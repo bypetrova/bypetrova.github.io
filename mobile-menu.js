@@ -16,6 +16,26 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true')setOpen(false)});
   matchMedia('(min-width:768px)').addEventListener('change',function(e){if(e.matches&&toggle.getAttribute('aria-expanded')==='true')setOpen(false)});
 })();
+
+/* A restrained, staggered entrance for the project collage only. */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window))return;
+  var ids=['1790082754926000001','1790085462734000029','1790085482163000030','1790084431643000027','1790084531807000028'];
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      entry.target.classList.add('desh-card-visible');
+      observer.unobserve(entry.target);
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  ids.forEach(function(id,index){
+    var img=document.querySelector('#rec4053187401 .tn-elem[data-elem-id="'+id+'"] img');
+    if(!img)return;
+    img.classList.add('desh-card-motion');
+    img.style.transitionDelay=Math.min(index,2)*90+'ms';
+    observer.observe(img);
+  });
+})();
 (function(){
   var progress=document.createElement('div');
   progress.className='desh-progress';

@@ -27,3 +27,8 @@
 .desh-to-top:focus-visible{outline:2px solid #e04550;outline-offset:4px}
 @media(hover:hover){.desh-to-top:hover{border-color:#df3443}}
 @media(prefers-reduced-motion:reduce){.desh-to-top{transition:none}}
+/* Portfolio cards arrive in layers without moving Tilda's positioned wrappers. */
+@media(prefers-reduced-motion:no-preference){
+  #rec4053187401 .desh-card-motion{opacity:.45;transform:translate3d(0,20px,0) scale(.985);transition:opacity 1s ease,transform 1.15s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+  #rec4053187401 .desh-card-motion.desh-card-visible{opacity:1;transform:translate3d(0,0,0) scale(1);will-change:auto}
+}
