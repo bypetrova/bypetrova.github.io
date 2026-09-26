@@ -1,0 +1,16 @@
+.desh-menu-toggle,.desh-menu-backdrop,.desh-menu-panel{display:none}
+@media(max-width:767px){
+  #rec3351591201 .tn-molecule:has(a[href^="#rec"]),#rec3358724901 .tn-molecule:has(a[href^="#rec"]){display:none!important}
+  .desh-menu-toggle{display:flex;align-items:center;gap:9px;position:fixed;right:16px;top:max(16px,env(safe-area-inset-top));z-index:100002;padding:10px 14px;border:1px solid rgba(255,255,255,.8);border-radius:999px;background:rgba(18,18,18,.9);color:#fff;font:600 14px/1 Arial,sans-serif;letter-spacing:.04em;box-shadow:0 4px 22px rgba(0,0,0,.22);cursor:pointer;backdrop-filter:blur(12px)}
+  .desh-menu-mark{font-size:19px;line-height:12px;color:#b92431;font-weight:400;transition:transform .35s ease}
+  .desh-menu-toggle[aria-expanded="true"] .desh-menu-mark{transform:rotate(45deg)}
+  .desh-menu-backdrop{display:block;position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.48);opacity:0;visibility:hidden;transition:opacity .42s ease,visibility .42s ease}
+  .desh-menu-panel{display:flex;flex-direction:column;position:fixed;right:0;top:0;bottom:0;z-index:100001;width:min(86vw,370px);padding:96px 28px max(32px,env(safe-area-inset-bottom));box-sizing:border-box;background:#141414 url('https://optim.tildacdn.pub/tild3030-6130-4532-b035-393233306461/-/format/webp/Texture.png.webp') center/cover;color:#fff;box-shadow:-20px 0 50px rgba(0,0,0,.35);transform:translateX(105%);visibility:hidden;transition:transform .55s cubic-bezier(.22,1,.36,1),visibility .55s ease;overflow-y:auto}
+  .desh-menu-panel::before{content:'';position:absolute;left:28px;right:28px;top:75px;height:2px;background:#a8202b;transform:rotate(-1deg)}
+  .desh-menu-panel a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;font:600 clamp(19px,5.4vw,26px)/1.2 Arial,sans-serif;letter-spacing:-.02em}
+  .desh-menu-panel a:active,.desh-menu-panel a:focus-visible{color:#ec5964}
+  .desh-menu-open .desh-menu-backdrop{opacity:1;visibility:visible}
+  .desh-menu-open .desh-menu-panel{transform:translateX(0);visibility:visible}
+  body.desh-menu-open{overflow:hidden}
+}
+@media(max-width:767px) and (prefers-reduced-motion:reduce){.desh-menu-backdrop,.desh-menu-panel,.desh-menu-mark{transition:none!important}}

@@ -1,0 +1,16 @@
+/* Small interaction details; no transforms or stacking contexts on the collage. */
+@media (hover:hover) and (pointer:fine){
+  #rec3351591201 .tn-molecule:has(a[href^="#rec"]),
+  #rec3358724901 .tn-molecule:has(a[href^="#rec"]){transition:border-color .25s ease,background-color .25s ease}
+  #rec3351591201 .tn-molecule:has(a[href^="#rec"]):hover,
+  #rec3358724901 .tn-molecule:has(a[href^="#rec"]):hover{border-color:#c32a36!important;background-color:rgba(151,20,30,.18)!important}
+  #rec3351591201 a[href="https://t.me/desorry"],
+  #rec4015193601 a[href="https://t.me/desorry"]{transition:filter .25s ease}
+  #rec3351591201 a[href="https://t.me/desorry"]:hover,
+  #rec4015193601 a[href="https://t.me/desorry"]:hover{filter:brightness(1.18)}
+}
+.desh-menu-toggle:focus-visible,.desh-menu-panel a:focus-visible,#allrecords a:focus-visible{outline:2px solid #e04550;outline-offset:4px}
+@media(max-width:479px){
+  /* Let the first torn-paper divider run beyond both phone edges. */
+  #rec4014074401 .tn-elem[data-elem-id="1789732102923000016"]{width:452px!important}
+}
